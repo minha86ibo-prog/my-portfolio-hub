@@ -1,0 +1,1890 @@
+/* ==========================================================================
+   SHIN MIN HA - BRIGHT BEIGE EDITORIAL BRANDING SITE CSS
+   Concept: Bright Beige Editorial (Soft Premium Elegance)
+   ========================================================================== */
+
+/* 1. Reset & Global Aesthetics */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   STICKY HEADER NAVIGATION
+   ========================================================================== */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(252, 250, 247, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(245, 242, 235, 0.5);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1E2229;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.header-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1E2229;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-nav a:hover {
+    color: #5C4033;
+}
+
+@media (max-width: 768px) {
+    .header-nav {
+        display: none;
+    }
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #FDFBF7;
+    /* 따뜻하고 세련된 소프트 크림 베이지 배경 */
+    color: #1E2229;
+    /* 가독성이 뛰어난 소프트 다크 차콜 */
+    line-height: 1.8;
+    letter-spacing: -0.4px;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.brand-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 140px 40px;
+    /* 여백을 넓혀 잡지 같은 공간감 구현 */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 타이포그래피 규칙 */
+h1,
+h2,
+h3,
+h4 {
+    color: #1E2229;
+    font-weight: 700;
+}
+
+.section-headline {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    color: #5C4033;
+    /* 지적인 에스프레소 브라운 액센트 */
+}
+
+/* ==========================================================================
+   ① HERO SECTION (세련된 비대칭 매거진 스타일 커버)
+   ========================================================================== */
+.hero-section {
+    background-color: #FDFBF7;
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 0;
+    border-bottom: 1px solid #F5F2EB;
+}
+
+.hero-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 95vh;
+    align-items: center;
+    position: relative;
+}
+
+.hero-text-side {
+    flex: 0.8;
+    padding: 80px 30px 80px 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-image-side {
+    position: relative;
+    width: 100%;
+    /* Strictly force the height to stretch down to match the left identity card's bottom line */
+    height: 850px !important; 
+    min-height: 850px !important;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    
+    /* Preserved existing essential properties to prevent breaking the layout */
+    flex: 2.0;
+    background-color: #F5F2EB;
+    background-image: url('img/book07.png');
+    background-attachment: fixed;
+}
+
+.hero-character-img {
+    position: absolute;
+    /* Lifted from 0% to approx 15% to land perfectly on the sofa blanket */
+    bottom: 15% !important; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    max-width: 260px;
+    min-width: 160px;
+    height: auto;
+    display: block;
+    z-index: 10;
+    transition: all 0.3s ease; /* Adds a smooth appearance */
+}
+
+.hero-character-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hero books styling */
+.hero-books-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.hero-book-item {
+    position: absolute;
+    height: auto;
+    border-radius: 3px 8px 8px 3px;
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.38),
+        4px 4px 14px rgba(0, 0, 0, 0.22),
+        inset 3px 0 6px rgba(255, 255, 255, 0.18),
+        inset -2px 0 4px rgba(0, 0, 0, 0.15);
+    border-left: 4px solid rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.45s ease, z-index 0s;
+    will-change: transform;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.hero-book-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*
+ * 서재 배경(book07.png) 구도에 최적화된 책 배치
+ * book-1 (woman.jpg / 힐러리): 책장 좌측 상단 빈 칸 - 세워진 책처럼
+ * book-2 (aribaba.jpg / 마윈): 책장 중앙 빈 선반 공간 - 정면으로 기댄 책
+ * book-3 (ubermansch.jpg / 위버멘쉬): 소파 등받이 위에 살짝 걸친 책
+ */
+
+/* book-1: 힐러리 — 위버멘쉬(book-3) 오른쪽 아래 빈 서랍 칸, 나는 생각이 너무 많아*/
+/* ✏️ 위치 조정: top(위아래), left(좌우) 값을 직접 바꿔서 미세 조정하세요 */
+.hero-book-item.book-1 {
+    width: 140px;
+    top: 48%;
+    /* ↕ 위아래: 값 올리면 위로, 내리면 아래로 , */
+    left: 22%;
+    /* ↔ 좌우: 값 올리면 오른쪽, 내리면 왼쪽 */
+    transform: rotate(-1.5deg);
+    z-index: 3;
+    filter: brightness(0.88) contrast(1.05);
+}
+
+/* book-2: 내가 틀릴 수도 있습니다. — 책장 중앙 우측 빈 서랍 칸 (정면으로 세워진 형태) */
+.hero-book-item.book-2 {
+    width: 150px;
+    top: 64%;
+    left: 62%;
+    transform: rotate(0.8deg);
+    z-index: 2;
+    filter: brightness(0.88) contrast(1.08);
+}
+
+/* book-3: 위버멘쉬 — 소파 위 책장 하단 빈 칸, 살짝 기울어진 형태 */
+.hero-book-item.book-3 {
+    width: 130px;
+    top: 48%;
+    left: 8%;
+    transform: rotate(-5deg) translateY(2px);
+    z-index: 1;
+    filter: brightness(0.86) contrast(1.06);
+}
+
+/* book-4: 여자라면 힐러리처럼 — book-1 바로 오른쪽 */
+/* ✏️ 위치 조정: top(위아래), left(좌우) 값을 직접 바꿔서 조정하세요 */
+.hero-book-item.book-4 {
+    width: 135px;
+    top: 49%;
+    /* ↕ 위아래 위치 */
+    left: 35%;
+    /* ↔ book-1(20%) 오른쪽 바로 옆 */
+    transform: rotate(1.2deg);
+    z-index: 4;
+    filter: brightness(0.89) contrast(1.05);
+}
+
+/* book-5: 이것이 마윈의 알리바바다! — book-4 오른쪽 */
+/* ✏️ 위치 조정: top(위아래), left(좌우) 값을 직접 바꿔서 조정하세요 */
+.hero-book-item.book-5 {
+    width: 138px;
+    top: 48%;
+    /* ↕ 위아래 위치 */
+    left: 49%;
+    /* ↔ book-4(33%) 오른쪽 바로 옆 */
+    transform: rotate(-0.8deg);
+    z-index: 5;
+    filter: brightness(0.87) contrast(1.07);
+}
+
+.hero-book-item:hover {
+    transform: scale(1.1) translateY(-12px) rotate(0deg) !important;
+    box-shadow:
+        0 40px 60px rgba(0, 0, 0, 0.45),
+        12px 12px 28px rgba(0, 0, 0, 0.28);
+    z-index: 20;
+    filter: brightness(1.0) contrast(1.0) !important;
+}
+
+/* ============================================================
+   PORTFOLIO SECTION
+   ============================================================ */
+.portfolio-section {
+    background-color: #FDFBF7;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 100px !important;
+    border-bottom: none;
+    max-width: 100%; /* Override global section max-width */
+}
+
+@media (max-width: 768px) {
+    .portfolio-section {
+        margin-bottom: 60px !important;
+    }
+}
+
+.portfolio-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #5C4033;
+    margin-bottom: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 54px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+.portfolio-card {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 8px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #F5F2EB;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 80px; /* Space for the default title area */
+}
+
+.card-image-box {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #EAE6DF;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 24px;
+    background: #FFFFFF;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.portfolio-info h4 {
+    font-size: 1.05rem;
+    color: #1E2229;
+    margin-bottom: 0;
+    font-weight: 700;
+    transition: margin 0.3s ease-in-out;
+}
+
+.portfolio-details {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio-desc {
+    font-size: 0.9rem;
+    color: #4A463F;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    word-break: keep-all;
+}
+
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.portfolio-tags span {
+    background-color: #F7F4F0;
+    color: #5D4037;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-style: normal;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-card:hover .portfolio-info h4 {
+    margin-bottom: 12px;
+}
+
+.portfolio-card:hover .portfolio-details {
+    max-height: 150px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   PORTFOLIO MODAL LIGHTBOX
+   ============================================================ */
+.portfolio-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 8, 6, 0.88);
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 40px 20px;
+}
+
+.portfolio-modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio-modal-inner {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.88) translateY(20px);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #FDFBF7;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.portfolio-modal-overlay.is-open .portfolio-modal-inner {
+    transform: scale(1) translateY(0);
+}
+
+.portfolio-modal-body {
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-modal-img-placeholder {
+    width: 100%;
+    min-height: 400px;
+    background-color: #EAE6DF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #A39E93;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.portfolio-modal-body img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-modal-cta {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    background: #FFFFFF;
+    border-top: 1px solid #F5F2EB;
+}
+
+.portfolio-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: #5C4033;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.portfolio-btn:hover {
+    background-color: #3D2A22;
+    transform: translateY(-2px);
+}
+
+.portfolio-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(10, 8, 6, 0.1);
+    border: 1px solid rgba(10, 8, 6, 0.2);
+    color: #1E2229;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+    z-index: 10;
+}
+
+.portfolio-modal-close:hover {
+    background: rgba(10, 8, 6, 0.2);
+    transform: rotate(90deg);
+}
+
+.hero-section .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #5C4033;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+
+.hero-section h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 30px;
+    letter-spacing: -1.5px;
+}
+
+.hero-section .highlight {
+    color: #5C4033;
+    border-bottom: 2px solid #5C4033;
+    padding-bottom: 4px;
+}
+
+.hero-section .slogan {
+    font-size: 1.2rem;
+    color: #6E6A62;
+    font-weight: 300;
+}
+
+.scroll-indicator {
+    margin-top: 80px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #A39E93;
+}
+
+/* Hero Cards Layout */
+.hero-cards-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* MBTI Chart Card (Hero Section) */
+.mbti-chart-card {
+    background-color: #FFFFFF;
+    color: #4A463F;
+    width: 100%;
+    max-width: 240px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(92, 64, 51, 0.08);
+    border: 1px solid #F5F2EB;
+    will-change: transform;
+}
+
+.mbti-chart-card .chart-header {
+    background-color: #5C4033;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.mbti-chart-card .chart-header h4 {
+    color: #FFFFFF;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.mbti-chart-card .chart-subheader {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 12px 0;
+    line-height: 1.4;
+    border-bottom: 1px solid #F5F2EB;
+    background-color: #FDFBF7;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #6E6A62;
+}
+
+.mbti-chart-card .chart-body {
+    padding: 20px 10px 25px 10px;
+    background-color: #FFFFFF;
+}
+
+.radar-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   ② PROFILE SECTION (깔끔하고 우아한 정렬)
+   ========================================================================== */
+.profile-section {
+    background-color: #FFFFFF;
+    /* 흰색 교차 배열로 입체감 부여 */
+    max-width: 100%;
+    border-bottom: 1px solid #F5F2EB;
+}
+
+.section-grid {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 100px;
+}
+
+.grid-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.grid-right {
+    flex: 1.6;
+    min-width: 400px;
+}
+
+.avatar-frame {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 40px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #F5F2EB;
+}
+
+.tiger-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #FFFFFF;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    padding: 6px;
+    box-shadow: 0 4px 15px rgba(92, 64, 51, 0.08);
+    z-index: 1;
+}
+
+.meta-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info-item {
+    display: flex;
+    border-bottom: 1px solid #F5F2EB;
+    padding-bottom: 14px;
+}
+
+.info-item .label {
+    width: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #A39E93;
+    letter-spacing: 1.5px;
+}
+
+.info-item .value {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.info-item .sub {
+    font-size: 0.85rem;
+    color: #BCB8AE;
+    margin-left: 6px;
+}
+
+.mbti-tag {
+    background: #5C4033;
+    color: #FFF;
+    padding: 4px 12px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.editorial-title {
+    font-size: 2.2rem;
+    line-height: 1.45;
+    font-weight: 700;
+    margin-bottom: 35px;
+    letter-spacing: -1px;
+}
+
+.brand-desc {
+    font-size: 1.05rem;
+    color: #4A463F;
+    margin-bottom: 28px;
+}
+
+.keyword-group {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.keyword-tag {
+    display: inline-block;
+    color: #5C4033;
+    background: #F5F2EB;
+    padding: 6px 16px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   ③ STATS SECTION (소프트 크림 베이지 카드 레이아웃)
+   ========================================================================== */
+.stats-section {
+    background-color: #F5F2EB;
+    /* 묵직한 샌드 베이지 톤 */
+    max-width: 100%;
+    padding: 100px 40px;
+}
+
+.stats-grid {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: #FDFBF7;
+    padding: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(92, 64, 51, 0.05);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #5C4033;
+    margin-bottom: 15px;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: #6E6A62;
+}
+
+/* ==========================================================================
+   ④ TIMELINE SECTION
+   ========================================================================== */
+.timeline-section {
+    background-color: #FFFFFF;
+    max-width: 100%;
+    border-bottom: 1px solid #F5F2EB;
+}
+
+.wide-timeline {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    gap: 40px;
+}
+
+.timeline-block {
+    flex: 1;
+    min-width: 280px;
+    background: #FDFBF7;
+    padding: 40px 35px;
+    border-radius: 4px;
+    border: 1px solid #F5F2EB;
+}
+
+.time-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #5C4033;
+    margin-bottom: 20px;
+}
+
+.timeline-block h3 {
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.timeline-block p {
+    font-size: 0.95rem;
+    color: #6E6A62;
+}
+
+/* ==========================================================================
+   ⑤ INFLECTION POINT
+   ========================================================================== */
+.inflection-section {
+    background-color: #FDFBF7;
+    max-width: 100%;
+    padding: 120px 40px;
+    border-bottom: 1px solid #F5F2EB;
+}
+
+.inflection-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* 3D Flip Card Container */
+.inflection-image-side {
+    flex: 1.1;
+    height: 480px;
+    /* 고정 높이 제공하여 일관된 3D 원근 뷰 유지 */
+    perspective: 1500px;
+    /* 강력한 3D 입체 깊이 설정 */
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* 통통 튀는 스프링 리턴 효과 */
+    transform-style: preserve-3d;
+}
+
+/* 마우스 호버 시 3D 회전 트리거 */
+.inflection-image-side:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari 웹킷 브라우저 지원 */
+    backface-visibility: hidden;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+}
+
+.flip-card-front {
+    background-color: #FDFBF7;
+}
+
+.inflection-nancy-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.flip-card-back {
+    background-color: #1E1B1A;
+    /* 에스프레소 브라운 톤의 깊은 대비 */
+    color: #F5F2EB;
+    transform: rotateY(180deg);
+    /* 180도 대칭 설계 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border: 1px solid rgba(188, 184, 174, 0.2);
+}
+
+.back-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.back-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    color: #BCB8AE;
+    border-bottom: 1px solid rgba(188, 184, 174, 0.3);
+    padding-bottom: 8px;
+    width: 60px;
+}
+
+.back-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #F5F2EB;
+    max-width: 280px;
+}
+
+.back-signature {
+    font-size: 0.9rem;
+    color: #A39E93;
+    letter-spacing: 1px;
+}
+
+.inflection-wrapper {
+    flex: 1.3;
+}
+
+.inflection-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #A39E93;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.inflection-title {
+    font-size: 1.75rem;
+    /* 한 줄로 정갈하게 들어맞도록 최적의 타이포 크기 설정 */
+    margin-bottom: 35px;
+    font-weight: 700;
+    line-height: 1.35;
+    white-space: nowrap;
+    /* 데스크톱에서 절대 잘리지 않고 한 줄로 완벽 정렬 */
+}
+
+.inflection-text {
+    font-size: 1.05rem;
+    color: #6E6A62;
+    margin-bottom: 24px;
+    text-align: left;
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   ⑥ SALES MASTERY (글과 비즈니스 오브제 이미지가 가로로 배치되는 레이아웃)
+   ========================================================================== */
+.mastery-section {
+    background-color: #FFFFFF;
+    max-width: 100%;
+    border-bottom: 1px solid #F5F2EB;
+}
+
+.mastery-layout {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+}
+
+.mastery-left-content {
+    flex: 1.4;
+}
+
+.mastery-right-image {
+    flex: 1.25;
+    min-width: 320px;
+    align-self: flex-start;
+    /* 오른쪽 박스가 왼쪽 콘텐츠 높이에 늘어나지 않게 */
+    padding-top: 73px;
+    /* ✏️ 왼쪽 제목 높이에 맞춰 내리기: 값 올리면 더 내려감 */
+}
+
+.sticky-image-container {
+    position: sticky;
+    top: 60px;
+    /* 스크롤 시 우측 이미지가 기분 좋게 따라붙는 효과 */
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.editorial-inline-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.editorial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.editorial-item {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #F5F2EB;
+}
+
+.editorial-item:last-child {
+    border-bottom: none;
+}
+
+.item-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #BCB8AE;
+    line-height: 1;
+}
+
+.item-body h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.item-body p {
+    font-size: 1rem;
+    color: #6E6A62;
+}
+
+.duration {
+    font-size: 0.85rem;
+    color: #5C4033;
+    background-color: #F5F2EB;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-left: 6px;
+}
+
+/* 하이라이트 아이템을 과하지 않고 우아하게 사각형 테두리로 연출 */
+.highlight-item {
+    background: #FDFBF7;
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid #5C4033;
+}
+
+.highlight-item .item-num {
+    color: #5C4033;
+}
+
+/* ==========================================================================
+   ⑦ SKILLS SECTION
+   ========================================================================== */
+.skills-section {
+    background: #FDFBF7;
+    max-width: 100%;
+    border-bottom: 1px solid #F5F2EB;
+}
+
+.skills-layout {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    gap: 60px;
+}
+
+.skills-block {
+    flex: 1;
+    min-width: 280px;
+}
+
+.skills-block h3 {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #5C4033;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #5C4033;
+    padding-bottom: 10px;
+}
+
+.minimal-skill {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #F5F2EB;
+    font-weight: 400;
+}
+
+.minimal-skill .s-name {
+    color: #4A463F;
+}
+
+.minimal-skill .s-val {
+    color: #5C4033;
+    font-weight: 700;
+}
+
+.cert-row {
+    padding: 14px 0;
+    border-bottom: 1px solid #F5F2EB;
+}
+
+.cert-row strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.cert-row .c-org {
+    font-size: 0.85rem;
+    color: #A39E93;
+}
+
+.skills-foot {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    font-size: 0.85rem;
+    color: #A39E93;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   ⑧ NEXT CHAPTER & BOOKS (이미지 요소가 녹아든 하단 하이라이트 라운지)
+   ========================================================================== */
+.next-section {
+    background: #FFFFFF;
+    max-width: 100%;
+}
+
+.next-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 100px;
+}
+
+.next-brand {
+    flex: 1.2;
+    min-width: 320px;
+}
+
+.books-brand {
+    flex: 1;
+    min-width: 320px;
+}
+
+.next-brand .tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #A39E93;
+    letter-spacing: 1px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.next-brand h2 {
+    font-size: 2.2rem;
+    line-height: 1.45;
+    margin-bottom: 35px;
+}
+
+.next-brand .accent-brown {
+    color: #5C4033;
+}
+
+.next-brand p {
+    color: #4A463F;
+    margin-bottom: 30px;
+}
+
+/* 이미지 박스 래퍼 스타일 (세련된 여백과 고정 비율) */
+.next-img-wrapper {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 35px;
+    border: 1px solid #F5F2EB;
+}
+
+.books-img-wrapper {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 35px;
+    border: 1px solid #F5F2EB;
+}
+
+.next-inline-img,
+.books-inline-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 바이브코딩 크림 톤 박스 보정 */
+.vibe-quote {
+    background: #FDFBF7;
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid #F5F2EB;
+    border-left: 3px solid #5C4033;
+}
+
+.vibe-quote strong {
+    color: #1E2229;
+    display: block;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+/* 모니터 화면 위 타이핑 효과 오버레이 (기존 이미지 텍스트 덮기) */
+.monitor-typing-overlay {
+    position: absolute;
+    top: 7%;
+    left: 10%;
+    /* ✏️ 텍스트가 잘리지 않도록 좌우 여백을 넓게 사용 */
+    width: 80%;
+    /* ✏️ 한 줄에 길게 들어가도록 너비 대폭 확장 */
+    height: 48%;
+
+    /* ✏️ 원본 이미지가 깨끗해졌으므로 완벽한 투명 배경으로 변경 */
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+
+    /* 텍스트 스타일 */
+    color: #1E1B1A;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.9rem;
+    /* ✏️ 모니터 안에 잘 들어오도록 폰트 크기 살짝 조정 */
+    line-height: 1.6;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -1px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: pre-line;
+    /* \n에서만 줄바꿈되도록 유지 */
+    word-break: keep-all;
+    /* 단어 중간에서 줄바꿈 방지 */
+    z-index: 10;
+}
+
+/* 깜빡이는 커서 */
+.vibe-cursor {
+    display: inline-block;
+    color: #5C4033;
+    font-weight: 400;
+    animation: vibe-blink 0.75s step-end infinite;
+    margin-left: 1px;
+}
+
+@keyframes vibe-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* 타이핑 완료 후 커서 숨기기 */
+.vibe-cursor.done {
+    animation: none;
+    opacity: 0;
+}
+
+.vibe-quote p {
+    color: #6E6A62;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* 책 섹션 감성 리터칭 */
+.quote-editorial {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: #5C4033;
+    font-weight: 500;
+    margin-top: 82px;
+    margin-bottom: 40px;
+}
+
+.book-list-editorial {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.book-editorial-item {
+    border-left: 1px solid #F5F2EB;
+    padding-left: 20px;
+}
+
+.b-author {
+    display: block;
+    font-size: 0.8rem;
+    color: #A39E93;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.b-title {
+    font-size: 1.05rem;
+    color: #1E2229;
+    font-weight: 500;
+}
+
+/* ============================================================
+   MENTOR QUOTE BOX (우보만리 특별 영역)
+   ============================================================ */
+.mentor-quote-box {
+    margin-top: 50px;
+    background-color: #FAF6F0; /* 아주 연한 웜베이지 톤 */
+    border: 1px solid #EFEAE2;
+    border-radius: 16px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(92, 64, 51, 0.05);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+.mentor-quote-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(92, 64, 51, 0.1);
+}
+
+.mentor-quote-box .quote-symbol {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 20px auto;
+}
+
+.mentor-quote-box .ox-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.mentor-quote-box .quote-title {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #5C4033; /* 깊이감 있는 딥 브라운 */
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.mentor-quote-box .quote-title-sub {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #8C7B70;
+    letter-spacing: 0;
+    margin-left: 4px;
+}
+
+.mentor-quote-box .quote-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #6E6A62; /* 챠콜/딥브라운 브릿지 톤 */
+    word-break: keep-all;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .mentor-quote-box {
+        padding: 25px 20px;
+    }
+    .mentor-quote-box .quote-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* ==========================================================================
+   FOOTER SECTION
+   ========================================================================== */
+.brand-footer {
+    background: #F5F2EB;
+    color: #6E6A62;
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 0.9rem;
+}
+
+.brand-footer .sub-foot {
+    font-size: 0.8rem;
+    color: #A39E93;
+    margin-top: 8px;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS (반응형 뷰포트 완벽 대응)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .hero-section {
+        background-image: url('img/book07.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .hero-wrapper {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-text-side {
+        padding: 80px 40px;
+        background: rgba(253, 251, 247, 0.85);
+        width: 100%;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+
+    .hero-image-side {
+        display: none;
+    }
+
+    .hero-book-item {
+        /* 모바일에서 더 작게 */
+    }
+
+    .hero-book-item.book-1 {
+        width: 95px;
+        top: 5%;
+        left: 18%;
+        transform: rotate(-1deg);
+    }
+
+    .hero-book-item.book-2 {
+        width: 100px;
+        top: 30%;
+        left: 60%;
+        transform: rotate(0.8deg);
+    }
+
+    .hero-book-item.book-3 {
+        width: 85px;
+        top: 52%;
+        left: 6%;
+        transform: rotate(-5deg) translateY(2px);
+    }
+
+    .mastery-layout {
+        flex-direction: column;
+    }
+
+    .sticky-image-container {
+        height: 350px;
+    }
+
+    .inflection-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .inflection-image-side {
+        max-width: 450px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .inflection-text {
+        text-align: center;
+    }
+
+    .inflection-wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .inflection-title {
+        white-space: normal;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 80px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.0rem;
+    }
+
+    .hero-section h2, .hero-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .section-headline {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .section-grid,
+    .wide-timeline,
+    .skills-layout,
+    .next-container,
+    .stats-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .editorial-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mbti-chart-card {
+        max-width: 100%;
+    }
+
+    .hero-character-img {
+        position: static;
+        display: block;
+        margin: 30px auto;
+        width: 100%;
+        max-width: 220px;
+        transform: none;
+        z-index: 10;
+    }
+
+    .my-library-container {
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding: 10px 20px;
+    }
+
+    .my-library-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .library-book-item {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        width: 110px;
+    }
+}
+
+/* ==========================================================================
+   INTERACTION & ANIMATION LAYERS (추가된 효과)
+   ========================================================================== */
+
+/* 1. 커스텀 커서 스타일 */
+.cursor {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(92, 64, 51, 0.3);
+    border: 1px solid #5C4033;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-text {
+    color: #FFFFFF;
+    font-size: 0px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease, font-size 0.3s ease;
+}
+
+/* 버튼/링크 일반 호버 상태 */
+.cursor-hover {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(92, 64, 51, 0.6);
+}
+
+/* 이미지/카드 VIEW 텍스트 호버 상태 */
+.cursor-view {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(92, 64, 51, 0.9);
+    border-color: transparent;
+}
+
+.cursor-view .cursor-text {
+    font-size: 11px;
+    opacity: 1;
+}
+
+/* 2. 호버 카드 애니메이션 준비 */
+.hover-card {
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    box-shadow: 0 20px 40px rgba(92, 64, 51, 0.15) !important;
+}
+
+/* 3. 부드러운 스크롤을 위한 설정 */
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+/* ==========================================================================
+   ADVANCED ENTREPRENEUR INTERACTION EFFECTS (추가된 효과)
+   ========================================================================== */
+
+/* 1. 타임라인 진행선 스타일 (Effect 1) */
+.timeline-progress-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.timeline-progress-track {
+    position: absolute;
+    background-color: #F5F2EB;
+}
+
+.timeline-progress-bar {
+    position: absolute;
+    background-color: #5C4033;
+}
+
+@media (min-width: 769px) {
+    .timeline-progress-wrapper {
+        height: 2px;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .timeline-progress-track {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
+
+    .timeline-progress-bar {
+        top: 0;
+        left: 0;
+        width: 0%;
+        /* JS에서 제어 */
+        height: 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wide-timeline {
+        position: relative;
+        padding-left: 30px !important;
+    }
+
+    .timeline-progress-wrapper {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 2px;
+        height: 100%;
+        margin: 0;
+    }
+
+    .timeline-progress-track {
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+    }
+
+    .timeline-progress-bar {
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 0%;
+        /* JS에서 제어 */
+    }
+}
+
+/* 2. 패럴랙스용 이미지 확대 및 여백 제공 (Effect 3) */
+.editorial-inline-img,
+.books-inline-img,
+.hero-cover-img,
+.next-inline-img {
+    transform: scale(1.15);
+    /* 패럴랙스 스크롤 여유 공간 확보 */
+    will-change: transform;
+    transition: filter 0.5s ease;
+}
+
+/* 3. 마그네틱 Back to Top 버튼 (Effect 4) */
+.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FDFBF7;
+    border: 1px solid #5C4033;
+    color: #5C4033;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(92, 64, 51, 0.08);
+}
+
+.back-to-top .btn-arrow {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.back-to-top .btn-text {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.back-to-top:hover {
+    background-color: #5C4033;
+    color: #FFFFFF;
+}
+
+/* 4. 스킬 섹션 미니멀 게이지바 스타일 */
+.minimal-skill {
+    position: relative;
+}
+
+.skill-progress-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1.5px;
+    background-color: #5C4033;
+    width: 0%;
+    will-change: width;
+}
+
+/* 5. 세일즈 마스터리 시네마틱 스포트라이트 */
+.sticky-image-container .editorial-inline-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.sticky-image-container .editorial-inline-img.active {
+    opacity: 1;
+}
+
+.editorial-item {
+    border-left: 3px solid transparent;
+    padding-left: 15px;
+    transition: border-color 0.4s ease, padding 0.4s ease;
+}
+
+.editorial-item.spotlight-active {
+    border-left-color: #5C4033;
+    padding-left: 25px;
+}
+
+.editorial-item.spotlight-active .item-num {
+    color: #5C4033;
+    font-weight: 700;
+}
