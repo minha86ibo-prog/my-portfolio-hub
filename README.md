@@ -3,8 +3,7 @@
 > 프론트엔드 개발자 신민하의 포트폴리오 웹사이트
 
 ## 🚀 Live Demo
-
-https://my-portfolio-atppwls7e-minha86ibo-progs-projects.vercel.app/
+https://my-portfolio-hub-eta.vercel.app/
 
 ## 📖 About
 
@@ -52,4 +51,4 @@ https://my-portfolio-atppwls7e-minha86ibo-progs-projects.vercel.app/
 
 GitHub: https://github.com/minha86ibo-prog
 
-Portfolio: https://my-portfolio-atppwls7e-minha86ibo-progs-projects.vercel.app/
+Portfolio: https://my-portfolio-hub-eta.vercel.app/
