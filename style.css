@@ -31,9 +31,8 @@ html {
 }
 
 .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 40px;
+    width: 100%;
+    padding: 20px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
