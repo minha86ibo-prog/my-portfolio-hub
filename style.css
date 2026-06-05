@@ -5,7 +5,6 @@
 
 /* 1. Reset & Global Aesthetics */
 html {
-    scroll-behavior: smooth;
     scroll-padding-top: 80px;
 }
 
@@ -13,6 +12,7 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* ==========================================================================
@@ -1571,6 +1571,8 @@ h4 {
 @media (max-width: 768px) {
     section {
         padding: 80px 20px;
+        height: auto !important;
+        min-height: auto !important;
     }
 
     .hero-section h1 {

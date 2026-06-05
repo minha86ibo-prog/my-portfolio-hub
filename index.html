@@ -1298,6 +1298,21 @@
 
             vibeObserver.observe(triggerEl);
         })();
+
+        // 15. 모바일 터치 스크롤 바운싱/점프 버그 픽스
+        // a 태그 중 href="#"인 요소들이 클릭(터치) 시 상단으로 튀는 현상 방지
+        document.querySelectorAll('a[href="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+            });
+        });
+        
+        // 3D 카드 및 모든 hover-card 터치 시 포커스 레이아웃 시프트 방지
+        document.querySelectorAll('.hover-card, .portfolio-card, .flip-card-inner').forEach(card => {
+            card.addEventListener('touchstart', function() {
+                // 터치 시 액티브 상태 유지 및 스크롤 충돌 방지
+            }, { passive: true });
+        });
     </script>
 </body>
 
