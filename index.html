@@ -221,69 +221,144 @@
             </div>
         </section>
 
-        <section id="about-section" class="profile-section reveal-section">
-            <div class="section-grid">
-                <div class="grid-left">
-                    <div class="avatar-frame">
-                        <div class="tiger-badge">🐯</div>
-                        <img src="img/minha.jpg" alt="신민하 프로필" class="profile-img">
-                    </div>
-                    <div class="meta-info">
-                        <div class="info-item">
-                            <span class="label">BIRTH</span>
-                            <span class="value">1986. 06 <span class="sub">출생</span></span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">MBTI</span>
-                            <span class="value"><span class="mbti-tag">ENTJ-A</span></span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">FOCUS</span>
-                            <span class="value">개척 영업 & AI 웹 비즈니스</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-right">
-                    <h2 class="editorial-title">철저한 선구축 후폭발,<br>목표를 완수하는 몰입형 실행가</h2>
-                    <p class="brand-desc">
-                        처음에는 무엇을 어떻게 시작할지 깊게 고민하고 철저하게 구도를 설계하지만, 한 번 방향을 결정하면 앞만 보고 직진하여 반드시 목표를 완수하는 몰입형 성격입니다.
-                    </p>
-                    <p class="brand-desc">
-                        기초 체력을 완벽히 다져 장기적인 변수나 환경에 흔들리지 않는 시스템을 먼저 구축합니다. 현장에서 부족한 부분이 체크되면 즉시 관련 전문 서적들을 파고들어 공부하고, 다음날
-                        오전 현장에 즉각 반영하여 성과를 검증해냅니다.
-                    </p>
-                    <div class="keyword-group">
-                        <span class="keyword-tag">#호기심_가득</span>
-                        <span class="keyword-tag">#포기없는_끝장파</span>
-                        <span class="keyword-tag">#압도적_집중력</span>
-                        <span class="keyword-tag">#철저한_구도설계</span>
-                        <span class="keyword-tag">#상위10%_달성가</span>
-                    </div>
-
-                    <div style="margin-top: 40px; display: flex; gap: 12px; flex-wrap: wrap;">
-                        <a href="https://app.notion.com/p/minha-3655355fb46680e380a7d891d3fa89d8?source=copy_link"
-                            target="_blank" class="about-link-btn"
-                            style="display: inline-flex; align-items: center; padding: 12px 24px; font-weight: 600; text-decoration: none; border-radius: 30px; background-color: #FFFFFF; color: #333333; border: 1px solid #5C4033; transition: all 0.3s ease; cursor: pointer;"
-                            onmouseover="this.style.backgroundColor='#5C4033'; this.style.color='#FFFFFF'"
-                            onmouseout="this.style.backgroundColor='#FFFFFF'; this.style.color='#333333'">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" alt="Notion"
-                                style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;">
-                            비즈니스 빌드로그
-                        </a>
-
-                        <a href="https://www.instagram.com/minha.buildlog" target="_blank"
-                            class="about-link-btn instagram"
-                            style="display: inline-flex; align-items: center; padding: 12px 24px; font-weight: 600; text-decoration: none; border-radius: 30px; background-color: #FFFFFF; color: #333333; border: 1px solid #5C4033; transition: all 0.3s ease; cursor: pointer;"
-                            onmouseover="this.style.backgroundColor='#5C4033'; this.style.color='#FFFFFF'"
-                            onmouseout="this.style.backgroundColor='#FFFFFF'; this.style.color='#333333'">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                                alt="Instagram"
-                                style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;">
-                            공식 인스타그램
-                        </a>
-                    </div>
-                </div>
+        <style>
+          /* ── CORE COMPETENCIES: mirrors portfolio-section / portfolio-grid exactly ── */
+          .core-section-perfect {
+            background-color: #FDFBF7;
+            text-align: center;
+            /* Same padding as .portfolio-section */
+            padding: 100px 0;
+            margin-bottom: 0 !important;
+            border-bottom: none;
+            /* Override global section constraints */
+            max-width: 100% !important;
+            width: 100% !important;
+          }
+          .core-container-perfect {
+            /* Identical to .portfolio-grid parent wrapper */
+            width: 90% !important;
+            max-width: 1400px !important;
+            margin: 0 auto;
+          }
+          .core-title-perfect {
+            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #5C4033;
+            margin-bottom: 3rem;
+            letter-spacing: 1px;
+            text-transform: none;
+          }
+          .core-grid-perfect {
+            /* Identical to .portfolio-grid */
+            display: grid !important;
+            grid-template-columns: repeat(4, 1fr) !important;
+            gap: 54px !important;           /* same as portfolio gap */
+            width: 100% !important;
+            margin: 0 !important;           /* no extra auto-centering needed */
+          }
+          .core-card-perfect {
+            /* Full-width within grid cell — no max-width restriction */
+            width: 100% !important;
+            max-width: none !important;
+            display: block;
+            background: #FFFFFF;
+            border-radius: 8px;             /* matches .portfolio-card border-radius */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 1px solid #F5F2EB;
+            overflow: hidden;
+            cursor: pointer;
+            /* Soft Float & Glow — smooth ease on both lift and return */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            will-change: transform;
+          }
+          .core-card-perfect:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+          }
+          .core-card-perfect img {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            object-fit: cover !important;
+            border-radius: 0 !important;    /* card itself clips via overflow:hidden */
+            box-shadow: none !important;    /* shadow lives on the card, not the img */
+          }
+          .core-buttons-perfect {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 50px;
+          }
+          .core-btn-perfect {
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            background-color: #FFFFFF;
+            color: #333333;
+            border: 1px solid #1E2229;
+            transition: all 0.3s ease;
+            cursor: pointer;
+          }
+          .core-btn-perfect:hover {
+            background-color: #5d4a44;
+            color: #FFFFFF;
+            border-color: #5d4a44;
+          }
+          @media (max-width: 1024px) {
+            .core-grid-perfect {
+              grid-template-columns: repeat(2, 1fr) !important;
+            }
+          }
+          @media (max-width: 768px) {
+            .core-section-perfect {
+              padding: 60px 0 !important;
+            }
+            .core-grid-perfect {
+              grid-template-columns: 1fr !important;
+              gap: 32px !important;
+            }
+            .core-buttons-perfect {
+              flex-direction: column;
+              align-items: center;
+            }
+            .core-btn-perfect {
+              width: 100%;
+              max-width: 300px;
+              justify-content: center;
+            }
+          }
+        </style>
+        
+        <section class="core-section-perfect reveal-section">
+          <div class="core-container-perfect">
+            <h2 class="core-title-perfect">Core Competencies</h2>
+            
+            <div class="core-grid-perfect">
+              <div class="core-card-perfect hover-card">
+                <img src="img/card1.png" alt="호기심" />
+              </div>
+              <div class="core-card-perfect hover-card">
+                <img src="img/card2.png" alt="실행력" />
+              </div>
+              <div class="core-card-perfect hover-card">
+                <img src="img/card3.png" alt="비즈니스 감각" />
+              </div>
+              <div class="core-card-perfect hover-card">
+                <img src="img/card4.png" alt="몰입" />
+              </div>
             </div>
+
+            <div class="core-buttons-perfect">
+              <a href="https://app.notion.com/p/minha-3655355fb46680e380a7d891d3fa89d8?source=copy_link" target="_blank" class="core-btn-perfect"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" alt="Notion" style="width: 18px; height: 18px; margin-right: 8px;"> 비즈니스 빌드로그</a>
+              <a href="https://www.instagram.com/minha.buildlog" target="_blank" class="core-btn-perfect insta-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 18px; height: 18px; margin-right: 8px;"> 공식 인스타그램</a>
+            </div>
+          </div>
         </section>
 
         <section class="stats-section reveal-section">
@@ -366,8 +441,7 @@
         <section id="experience-section" class="mastery-section reveal-section">
             <div class="mastery-layout">
                 <div class="mastery-left-content">
-                    <h2 class="section-headline" style="text-align: center; font-size: 3rem; margin-bottom: 3rem;">10
-                        Years of Sales Mastery</h2>
+                    <h2 class="section-headline" style="font-family: 'Noto Sans KR', sans-serif; font-size: 3rem; font-weight: 700; color: #5C4033; letter-spacing: 1px; text-transform: none; text-align: center; margin-bottom: 3rem;">10 Years of Sales Mastery</h2>
                     <div class="editorial-list">
                         <div class="editorial-item">
                             <div class="item-num">01</div>
@@ -416,8 +490,7 @@
         </section>
 
         <section class="skills-section reveal-section">
-            <h2 class="section-headline" style="text-align: center; font-size: 3rem; margin-bottom: 3rem;">Tech
-                Capabilities & Credentials</h2>
+            <h2 class="section-headline" style="font-family: 'Noto Sans KR', sans-serif; font-size: 3rem; font-weight: 700; color: #5C4033; letter-spacing: 1px; text-transform: none; text-align: center; margin-bottom: 3rem;">Tech Capabilities & Credentials</h2>
             <div class="skills-layout">
                 <div class="skills-block">
                     <h3>AI Tools & Design</h3>
