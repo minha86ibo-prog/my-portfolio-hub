@@ -54,7 +54,8 @@
                 <div class="hero-text-side">
                     <div class="subtitle">THE GROWTH ARCHITECT</div>
                     <h1 id="typewriter-text"></h1>
-                    <p class="slogan">"어제보다 오늘, 오늘보다 내일 더, 성장하는 민하가 되자!"</p>
+                    <p class="slogan">"14년 영업 현장의 내공으로 비즈니스를 꿰뚫고,<br>
+                        AI 웹 코딩으로 현실에 구현합니다."</p>
 
                     <div class="hero-cards-wrapper">
                         <!-- MBTI Chart -->
@@ -133,10 +134,7 @@
                     <div class="scroll-indicator">SCROLL DOWN —</div>
                 </div>
                 <div class="hero-image-side">
-                    <!-- Books have been moved to the library section below -->
-                    <div class="hero-character-img">
-                        <img src="img/hero-front.png" alt="독서하는 성장형 캐릭터">
-                    </div>
+                    <img src="img/rending.png" alt="AI 웹 빌더" class="hero-main-img">
                 </div>
             </div>
         </header>
@@ -588,7 +586,7 @@
     <script>
         // 1. 타이핑 효과 (Typewriter)
         const textElement = document.getElementById('typewriter-text');
-        const text = '매일 매일 성장하는<br>노력파, <span class="highlight">신민하</span>입니다.';
+        const text = '비즈니스를 아는 <br>AI 웹 빌더, <span class="highlight">신민하</span>입니다.';
         textElement.innerHTML = '';
         let index = 0;
 
@@ -1306,10 +1304,10 @@
                 e.preventDefault();
             });
         });
-        
+
         // 3D 카드 및 모든 hover-card 터치 시 포커스 레이아웃 시프트 방지
         document.querySelectorAll('.hover-card, .portfolio-card, .flip-card-inner').forEach(card => {
-            card.addEventListener('touchstart', function() {
+            card.addEventListener('touchstart', function () {
                 // 터치 시 액티브 상태 유지 및 스크롤 충돌 방지
             }, { passive: true });
         });
