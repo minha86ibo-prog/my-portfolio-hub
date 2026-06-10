@@ -1513,19 +1513,49 @@ h4 {
         position: relative;
         width: 100%;
         min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(253, 251, 247, 0.65);
+        z-index: 1;
     }
 
     .hero-wrapper {
         flex-direction: column;
         min-height: auto;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .hero-text-side {
-        padding: 80px 40px;
-        background: rgba(253, 251, 247, 0.85);
+        padding: 40px 20px;
+        background: transparent;
         width: 100%;
-        min-height: 100vh;
+        min-height: auto;
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text-side h1,
+    .hero-text-side .subtitle,
+    .hero-text-side .slogan {
+        text-align: center;
     }
 
     .hero-image-side {
