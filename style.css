@@ -1153,67 +1153,27 @@ h4 {
     width: 100%;
     max-width: 1000px;
     margin: 40px auto 0 auto;
-    display: flex;
-    gap: 60px;
-}
-
-.skills-block {
-    flex: 1;
-    min-width: 280px;
-}
-
-.skills-block h3 {
-    font-size: 1.05rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #5C4033;
-    margin-bottom: 24px;
-    border-bottom: 1px solid #5C4033;
-    padding-bottom: 10px;
-}
-
-.minimal-skill {
-    display: flex;
-    justify-content: space-between;
-    padding: 14px 0;
-    border-bottom: 1px solid #F5F2EB;
-    font-weight: 400;
-}
-
-.minimal-skill .s-name {
-    color: #4A463F;
-}
-
-.minimal-skill .s-val {
-    color: #5C4033;
-    font-weight: 700;
-}
-
-.cert-row {
-    padding: 14px 0;
-    border-bottom: 1px solid #F5F2EB;
-}
-
-.cert-row strong {
     display: block;
-    font-size: 1rem;
-    font-weight: 500;
 }
 
-.cert-row .c-org {
-    font-size: 0.85rem;
-    color: #A39E93;
-}
-
-.skills-foot {
+.toolkit-img {
     width: 100%;
     max-width: 1000px;
-    margin: 40px auto 0 auto;
-    font-size: 0.85rem;
-    color: #A39E93;
-    font-style: italic;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    /* 스크롤 등장 애니메이션 기본 상태 (숨김) */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* 스크롤 등장 활성화 상태 (JS 연동) */
+.toolkit-img.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* ==========================================================================
    ⑧ NEXT CHAPTER & BOOKS (이미지 요소가 녹아든 하단 하이라이트 라운지)
    ========================================================================== */

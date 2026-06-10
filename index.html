@@ -20,8 +20,8 @@
         /* 스크롤 시 나타날 효과 (기본 상태) */
         .reveal-section {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transform: translateY(40px);
+            transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         /* 나타난 상태 */
@@ -465,55 +465,10 @@
         </section>
 
         <section class="skills-section reveal-section">
-            <h2 class="section-headline" style="font-family: 'Noto Sans KR', sans-serif; font-size: 3rem; font-weight: 700; color: #5C4033; letter-spacing: 1px; text-transform: none; text-align: center; margin-bottom: 3rem;">Tech Capabilities & Credentials</h2>
+            <h2 class="section-headline" style="font-family: 'Noto Sans KR', sans-serif; font-size: 3rem; font-weight: 700; color: #5C4033; letter-spacing: 1px; text-transform: none; text-align: center; margin-bottom: 3rem;">AI Web Builder Toolkit</h2>
             <div class="skills-layout">
-                <div class="skills-block">
-                    <h3>AI Tools & Design</h3>
-                    <div class="minimal-skill">
-                        <span class="s-name">Gemini AI / ChatGPT</span>
-                        <span class="s-val" data-target="80">80%</span>
-                        <div class="skill-progress-fill"></div>
-                    </div>
-                    <div class="minimal-skill">
-                        <span class="s-name">Claude AI</span>
-                        <span class="s-val" data-target="60">60%</span>
-                        <div class="skill-progress-fill"></div>
-                    </div>
-                    <div class="minimal-skill">
-                        <span class="s-name">Figma (디자인 연동)</span>
-                        <span class="s-val" data-target="70">70%</span>
-                        <div class="skill-progress-fill"></div>
-                    </div>
-                </div>
-                <div class="skills-block">
-                    <h3>Web Development</h3>
-                    <div class="minimal-skill">
-                        <span class="s-name">HTML</span>
-                        <span class="s-val" data-target="70">70%</span>
-                        <div class="skill-progress-fill"></div>
-                    </div>
-                    <div class="minimal-skill">
-                        <span class="s-name">Firebase / 백엔드 연동</span>
-                        <span class="s-val" data-target="60">60%</span>
-                        <div class="skill-progress-fill"></div>
-                    </div>
-                    <div class="minimal-skill">
-                        <span class="s-name">CSS</span>
-                        <span class="s-val" data-target="55">55%</span>
-                        <div class="skill-progress-fill"></div>
-                    </div>
-                </div>
-                <div class="skills-block">
-                    <h3>Certifications</h3>
-                    <div class="cert-row"><strong>[NCS산대특]<br>
-                            AI 바이브코딩 웹비즈니스구축및 마케팅실정과정 수료</strong></div>
-                    <div class="cert-row"><strong>JLPT 1급</strong><span class="c-org">일본어능력시험 (지도 역량)</span></div>
-                    <div class="cert-row"><strong>증권투자권유대행인</strong><span class="c-org">한국금융투자협회</span></div>
-                    <div class="cert-row"><strong>펀드투자권유대행인</strong><span class="c-org">한국금융투자협회</span></div>
-                    <div class="cert-row"><strong>워드프로세서 3급</strong><span class="c-org">대한상공회의소</span></div>
-                </div>
+                <img src="img/v1_clean.png" alt="AI Web Builder Toolkit Infographic" class="toolkit-img">
             </div>
-            <p class="skills-foot">* 모든 역량을 80% 이상의 프리미엄 마스터 수준으로 끌어올리는 것을 목표로 정진하고 있습니다.</p>
         </section>
 
         <section class="next-section reveal-section">
@@ -660,7 +615,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.reveal-section').forEach(section => {
+        document.querySelectorAll('.reveal-section, .toolkit-img').forEach(section => {
             observer.observe(section);
         });
 
