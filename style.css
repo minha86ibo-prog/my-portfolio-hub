@@ -252,7 +252,7 @@ h4 {
 }
 
 /*
- * 서재 배경(book07.png) 구도에 최적화된 책 배치
+ * 서재 배경(rending.png) 구도에 최적화된 책 배치
  * book-1 (woman.jpg / 힐러리): 책장 좌측 상단 빈 칸 - 세워진 책처럼
  * book-2 (aribaba.jpg / 마윈): 책장 중앙 빈 선반 공간 - 정면으로 기댄 책
  * book-3 (ubermansch.jpg / 위버멘쉬): 소파 등받이 위에 살짝 걸친 책
@@ -850,8 +850,14 @@ h4 {
     width: 100%;
     max-width: 1000px;
     margin: 40px auto 0 auto;
-    display: flex;
-    gap: 40px;
+    display: block;
+}
+
+.roadmap-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 
 .timeline-block {
@@ -1500,7 +1506,7 @@ h4 {
    ========================================================================== */
 @media (max-width: 992px) {
     .hero-section {
-        background-image: url('img/book07.png');
+        background-image: url('img/rending.png');
         background-size: cover;
         background-position: center;
         background-attachment: scroll;
@@ -1777,7 +1783,6 @@ html.lenis {
 @media (max-width: 768px) {
     .wide-timeline {
         position: relative;
-        padding-left: 30px !important;
     }
 
     .timeline-progress-wrapper {
