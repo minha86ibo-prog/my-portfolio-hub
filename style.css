@@ -1545,7 +1545,7 @@ h4 {
     }
 
     .hero-text-side {
-        padding: 0 20px !important; /* 가독성을 위한 좌우 여백 확보 */
+        padding: 0;
         background: transparent;
         width: 100%;
         min-height: auto !important;
@@ -1553,17 +1553,16 @@ h4 {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        align-items: flex-end; /* 우측 정렬 유지 */
-        text-align: right;     /* 우측 정렬 유지 */
+        align-items: center;
+        text-align: center;
         position: relative !important;
     }
 
     .hero-text-side h1,
     .hero-text-side .subtitle,
     .hero-text-side .slogan {
-        text-align: right; /* 우측 가장자리에 붙지 않도록 위에서 패딩 처리 완료 */
+        text-align: center;
         position: relative !important;
-        width: 100%;
     }
 
     .hero-cards-wrapper {
@@ -1574,8 +1573,6 @@ h4 {
         margin-top: 30px;
         position: relative !important;
         height: auto !important;
-        padding-right: 20px !important; /* 카드 우측 여백 추가 */
-        box-sizing: border-box;
     }
 
     .mbti-chart-card {
@@ -1585,7 +1582,6 @@ h4 {
         height: auto !important;
         margin: 0 !important;
         display: block !important;
-        box-sizing: border-box;
     }
 
     .hero-image-side {
